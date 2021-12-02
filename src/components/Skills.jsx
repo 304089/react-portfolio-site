@@ -6,6 +6,10 @@ import { requestStates } from '../constants';
 
 export const Skills = () => {
   const [state, dispatch] = useReducer(skillReducer, initialState);
+
+  const sortedLanguageList = () => (
+    state.languageList.sort((firstLang, nextLang) =>  nextLang.count - firstLang.count)
+  )
   
   useEffect(() => {
     dispatch({ type: actionTypes.fetch });
@@ -51,8 +55,8 @@ export const Skills = () => {
           }
           {
             state.requestState === requestStates.success && (
-              state.languageList.map((item, index) => (
-                <div key={index}>
+              sortedLanguageList().map((item, index) => (
+                <div className="skill-item" key={index}>
                   <p className="description"><strong>{item.language}</strong></p>
                   <Circle
                     animate
