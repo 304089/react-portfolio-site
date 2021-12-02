@@ -1,6 +1,7 @@
 // 画像をそれぞれimportします。パスに注意してください。
 import CoverImage from '../images/cover-image.JPG';
 import ProfileImage from '../images/profile-image.JPG';
+import { FaGithub } from 'react-icons/fa';
 
 export const Header = () => {
   return (
@@ -14,10 +15,9 @@ export const Header = () => {
             <h3 className="title-text">former job: Civil servant</h3>
             <ul className="social-icons">
               <li className="icon-link">
-                {/* TODO */}
-              </li>
-              <li className="icon-link">
-                {/* TODO */}
+                <a href="https://github.com/304089">
+                  <FaGithub color="white" size="2rem" />
+                </a>
               </li>
             </ul>
           </div>

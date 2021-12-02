@@ -1,5 +1,4 @@
 import './App.css';
-// Headerコンポーネントをimportする
 import { Header } from './components/Header';
 
 function App() {
